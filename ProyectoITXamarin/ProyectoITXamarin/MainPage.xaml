@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:ProyectoITXamarin"
+             xmlns:dxn="http://schemas.devexpress.com/xamarin/2014/forms/navigation"
+             xmlns:dxg="http://schemas.devexpress.com/xamarin/2014/forms/datagrid"
+             xmlns:dxe="http://schemas.devexpress.com/xamarin/2014/forms/editors"
+             xmlns:vm="clr-namespace:ProyectoITXamarin.DataModel"
+             x:Class="ProyectoITXamarin.MainPage">
+    <ContentPage.BindingContext>
+        <vm:ClienteRepository/>
+    </ContentPage.BindingContext>
+    <ContentPage.Resources>
+        <Color x:Key="lightText">#B8B8B8</Color>
+        <Color x:Key="blue600">#FFFFFF</Color>
+    </ContentPage.Resources>
+    <!--<dxe:SimpleButton Text = "Llamado" 
+                  Icon = "add" 
+                  BorderThickness="2"
+                  PressedBorderColor="DarkOrange"
+                  DisabledBorderColor="DarkGray"
+                  TextColor="Black"
+                  PressedTextColor="White"
+                  DisabledTextColor="DarkGray"
+                  IconColor="Black"
+                  PressedIconColor="White"
+                  DisabledIconColor="DarkGray"
+                  BackgroundColor="white"
+                  DisabledBackgroundColor="Brown"
+                  PressedBackgroundColor="Gray"      
+                  Clicked = "SimpleButton_Clicked"/>-->
+    <dxn:TabView HeaderPanelPosition="Bottom"
+             ItemHeaderWidth="*"
+             IsSelectedItemIndicatorVisible="True"
+             ItemHeaderTextColor="{StaticResource lightText}"
+             ItemHeaderIconColor="{StaticResource lightText}"
+             HeaderPanelBackgroundColor="#6000D9"
+             ItemHeaderFontSize="12">
+        <dxn:TabViewItem HeaderText="Clientes" HeaderFontSize="13"
+                         SelectedHeaderBackgroundColor="#6000D9"
+                         SelectedHeaderTextColor="{StaticResource blue600}"
+                         SelectedHeaderIconColor="{StaticResource blue600}">
+            <dxn:TabViewItem.Content>
+                    <StackLayout>
+                        <dxg:DataGridView x:Name="grid" ItemsSource="{Binding Clientes}" ShowAutoFilterRow="True">
+                            <dxg:DataGridView.CellStyle>
+                                <dxg:CellStyle Padding="12" BorderColor="#E8E8E8"
+                           FontSize="14" FontColor="#1A1A1A" 
+                           SelectionColor="#E2F0EE" SelectionFontColor="Black"/>
+                            </dxg:DataGridView.CellStyle>
+                            <dxg:DataGridView.ColumnHeaderStyle>
+                                <dxg:ColumnHeaderStyle Padding="15" BackgroundColor="#FAFAFA" BorderColor="#E8E8E8" BottomBorderColor="#E8E8E8"
+                                   FontSize="15" FontColor="#161616" FontAttributes="Bold" 
+                                   HorizontalLineThickness="1.4"/>
+                            </dxg:DataGridView.ColumnHeaderStyle>
+                            <dxg:DataGridView.Columns>
+                                <dxg:TextColumn FieldName="Name" Caption="Nombre" Width="170" AutoFilterCondition="Contains"/>
+                                <dxg:TextColumn FieldName="Ruc" Caption="Ruc" Width="150"/>
+                                <dxg:TextColumn FieldName="Codigo" Caption="Código" Width="90"/>
+                            </dxg:DataGridView.Columns>
+                        </dxg:DataGridView>
+                    </StackLayout>
+            </dxn:TabViewItem.Content>
+        </dxn:TabViewItem>
+        <dxn:TabViewItem HeaderText="Facturas" HeaderFontSize="13"
+                         SelectedHeaderBackgroundColor="#6000D9"
+                         SelectedHeaderTextColor="{StaticResource blue600}"
+                         SelectedHeaderIconColor="{StaticResource blue600}">
+            <dxn:TabViewItem.Content>
+                <StackLayout>
+                    <dxg:DataGridView x:Name="grid1" ItemsSource="{Binding Facturas}" ShowAutoFilterRow="True">
+                        <dxg:DataGridView.CellStyle>
+                            <dxg:CellStyle Padding="12" BorderColor="#E8E8E8"
+                               FontSize="14" FontColor="#1A1A1A" 
+                               SelectionColor="#E2F0EE" SelectionFontColor="Black"/>
+                        </dxg:DataGridView.CellStyle>
+                        <dxg:DataGridView.ColumnHeaderStyle>
+                            <dxg:ColumnHeaderStyle Padding="15" BackgroundColor="#FAFAFA" BorderColor="#E8E8E8" BottomBorderColor="#E8E8E8"
+                                       FontSize="15" FontColor="#161616" FontAttributes="Bold" 
+                                       HorizontalLineThickness="1.4"/>
+                        </dxg:DataGridView.ColumnHeaderStyle>
+                        <dxg:DataGridView.Columns>
+                            <dxg:TextColumn FieldName="Codigo" Caption="Código" Width="90" AutoFilterCondition="Contains"/>
+                            <dxg:TextColumn FieldName="NombreEmpresa" Caption="Empresa" Width="120"/>
+                            <dxg:TextColumn FieldName="Name" Caption="Cliente" Width="100"/>
+                            <dxg:TextColumn FieldName="Fecha" Caption="Fecha" Width="100"/>
+                        </dxg:DataGridView.Columns>
+                    </dxg:DataGridView>
+                </StackLayout>
+            </dxn:TabViewItem.Content>
+        </dxn:TabViewItem>
+        
+    </dxn:TabView>
+</ContentPage>
+    
