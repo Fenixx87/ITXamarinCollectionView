@@ -49,6 +49,9 @@
     <AndroidUseSharedRuntime>false</AndroidUseSharedRuntime>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="DevExpress.Xamarin.Android.Charts">
+      <HintPath>..\..\..\..\..\Dropbox\Mi PC (LAPTOP-PGDP0T8B)\Downloads\DevExpress.MobileUI.XamarinForms-20.2.5-20210121\DevExpress.Xamarin\Binaries\DevExpress.Xamarin.Android.Charts.dll</HintPath>
+    </Reference>
     <Reference Include="DevExpress.Xamarin.Android.Editors">
       <HintPath>..\..\..\..\..\Dropbox\Mi PC (LAPTOP-PGDP0T8B)\Downloads\DevExpress.MobileUI.XamarinForms-20.2.5-20210121\DevExpress.Xamarin\Binaries\DevExpress.Xamarin.Android.Editors.dll</HintPath>
     </Reference>
@@ -57,6 +60,9 @@
     </Reference>
     <Reference Include="DevExpress.Xamarin.Android.Navigation">
       <HintPath>..\..\..\..\..\Dropbox\Mi PC (LAPTOP-PGDP0T8B)\Downloads\DevExpress.MobileUI.XamarinForms-20.2.5-20210121\DevExpress.Xamarin\Binaries\DevExpress.Xamarin.Android.Navigation.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XamarinForms.Charts.Android">
+      <HintPath>..\..\..\..\..\Dropbox\Mi PC (LAPTOP-PGDP0T8B)\Downloads\DevExpress.MobileUI.XamarinForms-20.2.5-20210121\DevExpress.Xamarin\Binaries\DevExpress.XamarinForms.Charts.Android.dll</HintPath>
     </Reference>
     <Reference Include="DevExpress.XamarinForms.Editors.Android">
       <HintPath>..\..\..\..\..\Dropbox\Mi PC (LAPTOP-PGDP0T8B)\Downloads\DevExpress.MobileUI.XamarinForms-20.2.5-20210121\DevExpress.Xamarin\Binaries\DevExpress.XamarinForms.Editors.Android.dll</HintPath>

@@ -17,6 +17,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Reference Include="DevExpress.XamarinForms.Charts">
+      <HintPath>..\..\..\..\..\Dropbox\Mi PC (LAPTOP-PGDP0T8B)\Downloads\DevExpress.MobileUI.XamarinForms-20.2.5-20210121\DevExpress.Xamarin\Binaries\DevExpress.XamarinForms.Charts.dll</HintPath>
+    </Reference>
     <Reference Include="DevExpress.XamarinForms.Core">
       <HintPath>..\..\..\..\..\Dropbox\Mi PC (LAPTOP-PGDP0T8B)\Downloads\DevExpress.MobileUI.XamarinForms-20.2.5-20210121\DevExpress.Xamarin\Binaries\DevExpress.XamarinForms.Core.dll</HintPath>
     </Reference>

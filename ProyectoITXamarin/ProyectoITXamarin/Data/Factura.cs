@@ -7,45 +7,45 @@ namespace ProyectoITXamarin.Data
 {
     public class Factura : ModelObject
     {
-        string codigo;
-        string nombreEmpresa;
+        int id;
+        string nameEmpresa;
         string fecha;
         string name;
         public Factura()
         {
-            this.codigo = "";
-            this.nombreEmpresa = "";
+            this.id = 0;
+            this.nameEmpresa = "";
             this.fecha = "";
             this.name = "";
         }
-        public Factura(string codigo, string nombreEmpresa, string fecha, string name)
+        public Factura(int id, string nameEmpresa, string fecha, string name)
         {
-            this.codigo = codigo;
-            this.nombreEmpresa = nombreEmpresa;
+            this.id = id;
+            this.nameEmpresa = nameEmpresa;
             this.fecha = fecha;
             this.name = name;
         }
-        public string Codigo
+        public int Id
         {
-            get { return codigo; }
+            get { return id; }
             set
             {
-                if (codigo != value)
+                if (id != value)
                 {
-                    codigo = value;
-                    RaisePropertyChanged("Codigo");
+                    id = value;
+                    RaisePropertyChanged("Id");
                 }
             }
         }
-        public string NombreEmpresa
+        public string NameEmpresa
         {
-            get { return nombreEmpresa; }
+            get { return nameEmpresa; }
             set
             {
-                if (nombreEmpresa != value)
+                if (nameEmpresa != value)
                 {
-                    nombreEmpresa = value;
-                    RaisePropertyChanged("NombreEmpresa");
+                    nameEmpresa = value;
+                    RaisePropertyChanged("NameEmpresa");
                 }
             }
         }
@@ -77,10 +77,10 @@ namespace ProyectoITXamarin.Data
     public class ModelObject : INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler PropertyChanged;
-        protected void RaisePropertyChanged(string nombreEmpresa)
+        protected void RaisePropertyChanged(string nameEmpresa)
         {
             if (PropertyChanged != null)
-                PropertyChanged(this, new PropertyChangedEventArgs(nombreEmpresa));
+                PropertyChanged(this, new PropertyChangedEventArgs(nameEmpresa));
         }
     }
 }

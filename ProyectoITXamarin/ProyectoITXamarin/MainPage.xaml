@@ -5,30 +5,16 @@
              xmlns:dxn="http://schemas.devexpress.com/xamarin/2014/forms/navigation"
              xmlns:dxg="http://schemas.devexpress.com/xamarin/2014/forms/datagrid"
              xmlns:dxe="http://schemas.devexpress.com/xamarin/2014/forms/editors"
+             xmlns:dxc="http://schemas.devexpress.com/xamarin/2014/forms/charts"
              xmlns:vm="clr-namespace:ProyectoITXamarin.DataModel"
              x:Class="ProyectoITXamarin.MainPage">
     <ContentPage.BindingContext>
-        <vm:ClienteRepository/>
+        <local:ViewModel/>
     </ContentPage.BindingContext>
     <ContentPage.Resources>
         <Color x:Key="lightText">#B8B8B8</Color>
         <Color x:Key="blue600">#FFFFFF</Color>
     </ContentPage.Resources>
-    <!--<dxe:SimpleButton Text = "Llamado" 
-                  Icon = "add" 
-                  BorderThickness="2"
-                  PressedBorderColor="DarkOrange"
-                  DisabledBorderColor="DarkGray"
-                  TextColor="Black"
-                  PressedTextColor="White"
-                  DisabledTextColor="DarkGray"
-                  IconColor="Black"
-                  PressedIconColor="White"
-                  DisabledIconColor="DarkGray"
-                  BackgroundColor="white"
-                  DisabledBackgroundColor="Brown"
-                  PressedBackgroundColor="Gray"      
-                  Clicked = "SimpleButton_Clicked"/>-->
     <dxn:TabView HeaderPanelPosition="Bottom"
              ItemHeaderWidth="*"
              IsSelectedItemIndicatorVisible="True"
@@ -80,8 +66,8 @@
                                        HorizontalLineThickness="1.4"/>
                         </dxg:DataGridView.ColumnHeaderStyle>
                         <dxg:DataGridView.Columns>
-                            <dxg:TextColumn FieldName="Codigo" Caption="Código" Width="90" AutoFilterCondition="Contains"/>
-                            <dxg:TextColumn FieldName="NombreEmpresa" Caption="Empresa" Width="120"/>
+                            <dxg:TextColumn FieldName="Id" Caption="Id" Width="90" AutoFilterCondition="Contains"/>
+                            <dxg:TextColumn FieldName="NameEmpresa" Caption="Empresa" Width="120"/>
                             <dxg:TextColumn FieldName="Name" Caption="Cliente" Width="100"/>
                             <dxg:TextColumn FieldName="Fecha" Caption="Fecha" Width="100"/>
                         </dxg:DataGridView.Columns>
@@ -89,7 +75,24 @@
                 </StackLayout>
             </dxn:TabViewItem.Content>
         </dxn:TabViewItem>
-        
+        <dxn:TabViewItem HeaderText="Grafica" HeaderFontSize="13"
+                         SelectedHeaderBackgroundColor="#6000D9"
+                         SelectedHeaderTextColor="{StaticResource blue600}"
+                         SelectedHeaderIconColor="{StaticResource blue600}">
+            <dxn:TabViewItem.Content>
+                <dxc:PieChartView x:Name="chart">
+                    <dxc:PieChartView.Series>
+                        <dxc:DonutSeries>
+                            <dxc:DonutSeries.Data>
+                                <dxc:PieSeriesDataAdapter DataSource="{Binding Ventas}"
+                                              LabelDataMember="NameEmpresa"
+                                              ValueDataMember="Cantidad"/>
+                            </dxc:DonutSeries.Data>
+                        </dxc:DonutSeries>
+                    </dxc:PieChartView.Series>
+                </dxc:PieChartView>
+            </dxn:TabViewItem.Content>
+        </dxn:TabViewItem>
     </dxn:TabView>
 </ContentPage>
     

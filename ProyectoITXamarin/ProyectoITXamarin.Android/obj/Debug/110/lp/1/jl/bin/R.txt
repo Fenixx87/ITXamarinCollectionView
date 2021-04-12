@@ -103,7 +103,6 @@ int attr buttonTint 0x0
 int attr buttonTintMode 0x0
 int attr checkboxStyle 0x0
 int attr checkedTextViewStyle 0x0
-int attr checked_state 0x0
 int attr closeIcon 0x0
 int attr closeItemLayout 0x0
 int attr collapseContentDescription 0x0
@@ -155,11 +154,6 @@ int attr editTextColor 0x0
 int attr editTextStyle 0x0
 int attr elevation 0x0
 int attr expandActivityOverflowButtonDrawable 0x0
-int attr fastScrollEnabled 0x0
-int attr fastScrollHorizontalThumbDrawable 0x0
-int attr fastScrollHorizontalTrackDrawable 0x0
-int attr fastScrollVerticalThumbDrawable 0x0
-int attr fastScrollVerticalTrackDrawable 0x0
 int attr firstBaselineToTopHeight 0x0
 int attr font 0x0
 int attr fontFamily 0x0
@@ -189,7 +183,6 @@ int attr isLightTheme 0x0
 int attr itemPadding 0x0
 int attr lastBaselineToBottomHeight 0x0
 int attr layout 0x0
-int attr layoutManager 0x0
 int attr lineHeight 0x0
 int attr listChoiceBackgroundIndicator 0x0
 int attr listChoiceIndicatorMultipleAnimated 0x0
@@ -236,8 +229,6 @@ int attr radioButtonStyle 0x0
 int attr ratingBarStyle 0x0
 int attr ratingBarStyleIndicator 0x0
 int attr ratingBarStyleSmall 0x0
-int attr recyclerViewStyle 0x0
-int attr reverseLayout 0x0
 int attr searchHintIcon 0x0
 int attr searchIcon 0x0
 int attr searchViewStyle 0x0
@@ -249,13 +240,11 @@ int attr showDividers 0x0
 int attr showText 0x0
 int attr showTitle 0x0
 int attr singleChoiceItemLayout 0x0
-int attr spanCount 0x0
 int attr spinBars 0x0
 int attr spinnerDropDownItemStyle 0x0
 int attr spinnerStyle 0x0
 int attr splitTrack 0x0
 int attr srcCompat 0x0
-int attr stackFromEnd 0x0
 int attr state_above_anchor 0x0
 int attr state_has_error 0x0
 int attr state_indeterminate 0x0
@@ -267,7 +256,6 @@ int attr subtitleTextAppearance 0x0
 int attr subtitleTextColor 0x0
 int attr subtitleTextStyle 0x0
 int attr suggestionRowLayout 0x0
-int attr swipeRefreshLayoutProgressSpinnerBackgroundColor 0x0
 int attr switchMinWidth 0x0
 int attr switchPadding 0x0
 int attr switchStyle 0x0
@@ -313,8 +301,6 @@ int attr track 0x0
 int attr trackTint 0x0
 int attr trackTintMode 0x0
 int attr ttcIndex 0x0
-int attr unchecked_state 0x0
-int attr undetermined_state 0x0
 int attr viewInflaterClass 0x0
 int attr voiceIcon 0x0
 int attr windowActionBar 0x0
@@ -369,16 +355,12 @@ int color bright_foreground_material_light 0x0
 int color button_material_dark 0x0
 int color button_material_light 0x0
 int color checkbox 0x0
-int color checkboxTintColorDark 0x0
-int color checkboxTintColorLight 0x0
 int color checkbox_disabledForegroundColor 0x0
 int color checkbox_disabledLabelColor 0x0
 int color checkbox_disabledSelectedForegroundColor 0x0
 int color checkbox_foregroundColor 0x0
 int color checkbox_labelColor 0x0
 int color checkbox_selectedForegroundColor 0x0
-int color checkedCheckboxBackDark 0x0
-int color checkedCheckboxBackLight 0x0
 int color colorAccent 0x0
 int color colorPrimary 0x0
 int color colorPrimaryDark 0x0
@@ -488,10 +470,6 @@ int color textButton_foregroundColor 0x0
 int color textButton_foregroundColor_disabled 0x0
 int color tooltip_background_dark 0x0
 int color tooltip_background_light 0x0
-int color uncheckedCheckboxBackDark 0x0
-int color uncheckedCheckboxBackLight 0x0
-int color uncheckedCheckboxBorderDark 0x0
-int color uncheckedCheckboxBorderLight 0x0
 int dimen abc_action_bar_content_inset_material 0x0
 int dimen abc_action_bar_content_inset_with_nav 0x0
 int dimen abc_action_bar_default_height_material 0x0
@@ -625,9 +603,6 @@ int dimen editor_min_vertical_box_padding 0x0
 int dimen editor_min_width 0x0
 int dimen editor_padding_horizontal 0x0
 int dimen editor_padding_vertical 0x0
-int dimen fastscroll_default_thickness 0x0
-int dimen fastscroll_margin 0x0
-int dimen fastscroll_minimum_range 0x0
 int dimen highlight_alpha_material_colored 0x0
 int dimen highlight_alpha_material_dark 0x0
 int dimen highlight_alpha_material_light 0x0
@@ -635,9 +610,6 @@ int dimen hint_alpha_material_dark 0x0
 int dimen hint_alpha_material_light 0x0
 int dimen hint_pressed_alpha_material_dark 0x0
 int dimen hint_pressed_alpha_material_light 0x0
-int dimen item_touch_helper_max_drag_scroll_per_frame 0x0
-int dimen item_touch_helper_swipe_escape_max_velocity 0x0
-int dimen item_touch_helper_swipe_escape_velocity 0x0
 int dimen notification_action_icon_size 0x0
 int dimen notification_action_text_size 0x0
 int dimen notification_big_circle_margin 0x0
@@ -757,10 +729,6 @@ int drawable btn_radio_off_mtrl 0x0
 int drawable btn_radio_off_to_on_mtrl_animation 0x0
 int drawable btn_radio_on_mtrl 0x0
 int drawable btn_radio_on_to_off_mtrl_animation 0x0
-int drawable dx_check_box_checked 0x0
-int drawable dx_check_box_unchecked 0x0
-int drawable dx_check_box_undetermined 0x0
-int drawable dxcheckbox 0x0
 int drawable ic_checkbox 0x0
 int drawable ic_checkbox_checked 0x0
 int drawable ic_checkbox_checked_to_indeterminate 0x0
@@ -780,17 +748,12 @@ int drawable ic_drop_down 0x0
 int drawable ic_drop_down__down 0x0
 int drawable ic_drop_down__up 0x0
 int drawable ic_error 0x0
-int drawable ic_filter 0x0
-int drawable ic_group_down_24dp 0x0
-int drawable ic_group_up_24dp 0x0
 int drawable ic_minus 0x0
 int drawable ic_plus 0x0
 int drawable ic_search 0x0
 int drawable ic_size_l 0x0
 int drawable ic_size_m 0x0
 int drawable ic_size_s 0x0
-int drawable ic_sorting_down_24dp 0x0
-int drawable ic_sorting_up_24dp 0x0
 int drawable ic_time_picker 0x0
 int drawable ic_visibility 0x0
 int drawable ic_visibility_off 0x0
@@ -885,13 +848,8 @@ int id edit_query 0x0
 int id expand_activities_button 0x0
 int id expanded_menu 0x0
 int id forever 0x0
-int id grid_container_view 0x0
-int id grid_footer_view 0x0
-int id grid_header_view 0x0
-int id grid_rows_scrollview 0x0
 int id group_divider 0x0
 int id home 0x0
-int id horizontal_scroll_view 0x0
 int id ic_checkbox_checked 0x0
 int id ic_checkbox_indeterminate 0x0
 int id ic_checkbox_unchecked 0x0
@@ -900,7 +858,6 @@ int id icon_group 0x0
 int id image 0x0
 int id info 0x0
 int id italic 0x0
-int id item_touch_helper_previous_elevation 0x0
 int id line1 0x0
 int id line3 0x0
 int id listMode 0x0
@@ -917,7 +874,6 @@ int id on 0x0
 int id parentPanel 0x0
 int id progress_circular 0x0
 int id progress_horizontal 0x0
-int id pull_to_refresh_container 0x0
 int id radio 0x0
 int id right_icon 0x0
 int id right_side 0x0
@@ -944,9 +900,6 @@ int id src_in 0x0
 int id src_over 0x0
 int id submenuarrow 0x0
 int id submit_area 0x0
-int id swipe_button_image 0x0
-int id swipe_button_layout 0x0
-int id swipe_button_text 0x0
 int id tabMode 0x0
 int id tag_accessibility_actions 0x0
 int id tag_accessibility_clickable_spans 0x0
@@ -1015,8 +968,6 @@ int layout abc_select_dialog_material 0x0
 int layout abc_tooltip 0x0
 int layout custom_dialog 0x0
 int layout drop_down_item 0x0
-int layout grid_container_view 0x0
-int layout grid_control 0x0
 int layout notification_action 0x0
 int layout notification_action_tombstone 0x0
 int layout notification_template_custom_big 0x0
@@ -1027,7 +978,6 @@ int layout select_dialog_item_material 0x0
 int layout select_dialog_multichoice_material 0x0
 int layout select_dialog_singlechoice_material 0x0
 int layout support_simple_spinner_dropdown_item 0x0
-int layout swipe_button 0x0
 int string abc_action_bar_home_description 0x0
 int string abc_action_bar_up_description 0x0
 int string abc_action_menu_overflow_description 0x0
@@ -1659,10 +1609,6 @@ int styleable CompoundButton_android_button 0
 int styleable CompoundButton_buttonCompat 1
 int styleable CompoundButton_buttonTint 2
 int styleable CompoundButton_buttonTintMode 3
-int[] styleable DXCheckBox { 0x0, 0x0, 0x0 }
-int styleable DXCheckBox_checked_state 0
-int styleable DXCheckBox_unchecked_state 1
-int styleable DXCheckBox_undetermined_state 2
 int[] styleable DrawerArrowToggle { 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0 }
 int styleable DrawerArrowToggle_arrowHeadLength 0
 int styleable DrawerArrowToggle_arrowShaftLength 1
@@ -1778,19 +1724,6 @@ int styleable PopupWindowBackgroundState_state_above_anchor 0
 int[] styleable RecycleListView { 0x0, 0x0 }
 int styleable RecycleListView_paddingBottomNoButtons 0
 int styleable RecycleListView_paddingTopNoTitle 1
-int[] styleable RecyclerView { 0x10100eb, 0x10100f1, 0x10100c4, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0 }
-int styleable RecyclerView_android_clipToPadding 0
-int styleable RecyclerView_android_descendantFocusability 1
-int styleable RecyclerView_android_orientation 2
-int styleable RecyclerView_fastScrollEnabled 3
-int styleable RecyclerView_fastScrollHorizontalThumbDrawable 4
-int styleable RecyclerView_fastScrollHorizontalTrackDrawable 5
-int styleable RecyclerView_fastScrollVerticalThumbDrawable 6
-int styleable RecyclerView_fastScrollVerticalTrackDrawable 7
-int styleable RecyclerView_layoutManager 8
-int styleable RecyclerView_reverseLayout 9
-int styleable RecyclerView_spanCount 10
-int styleable RecyclerView_stackFromEnd 11
 int[] styleable SearchView { 0x10100da, 0x1010264, 0x1010220, 0x101011f, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0 }
 int styleable SearchView_android_focusable 0
 int styleable SearchView_android_imeOptions 1
@@ -1824,8 +1757,6 @@ int styleable StateListDrawable_android_variablePadding 4
 int styleable StateListDrawable_android_visible 5
 int[] styleable StateListDrawableItem { 0x1010199 }
 int styleable StateListDrawableItem_android_drawable 0
-int[] styleable SwipeRefreshLayout { 0x0 }
-int styleable SwipeRefreshLayout_swipeRefreshLayoutProgressSpinnerBackgroundColor 0
 int[] styleable SwitchCompat { 0x1010125, 0x1010124, 0x1010142, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0 }
 int styleable SwitchCompat_android_textOff 0
 int styleable SwitchCompat_android_textOn 1
