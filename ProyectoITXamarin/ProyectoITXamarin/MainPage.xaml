@@ -133,6 +133,25 @@
                 </dxc:PieChartView>
             </dxn:TabViewItem.Content>
         </dxn:TabViewItem>
+        <dxn:TabViewItem HeaderText="Barras" HeaderFontSize="13"
+                         SelectedHeaderBackgroundColor="#6000D9"
+                         SelectedHeaderTextColor="{StaticResource blue600}"
+                         SelectedHeaderIconColor="{StaticResource blue600}">
+            <dxn:TabViewItem.Content>
+                <dxc:ChartView>
+                    <dxc:ChartView.Series>
+                        <dxc:BarSeries PointColorizer="{local:CustomColorizer}">
+                            <dxc:BarSeries.Data>
+                                <dxc:SeriesDataAdapter DataSource="{Binding Ventas}" 
+                                           ArgumentDataMember="NameEmpresa">
+                                    <dxc:ValueDataMember Member="Cantidad" Type="Value" />
+                                </dxc:SeriesDataAdapter>
+                            </dxc:BarSeries.Data>
+                        </dxc:BarSeries>
+                    </dxc:ChartView.Series>
+                </dxc:ChartView>
+            </dxn:TabViewItem.Content>
+        </dxn:TabViewItem>
     </dxn:TabView>
 </ContentPage>
     

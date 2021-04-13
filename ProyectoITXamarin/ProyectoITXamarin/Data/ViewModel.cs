@@ -5,6 +5,7 @@ using Xamarin.Forms;
 using System.Net;
 using System.Net.Http;
 using Newtonsoft.Json;
+using DevExpress.XamarinForms.Charts;
 
 namespace ProyectoITXamarin
 {
@@ -51,8 +52,8 @@ namespace ProyectoITXamarin
 
     public class Venta
     {
-        public string NameEmpresa { get; }
-        public int Cantidad { get; }
+        public string NameEmpresa { get; set; }
+        public int Cantidad { get; set; }
 
         public Venta(int cantidad, string nameEmpresa)
         {
@@ -60,6 +61,16 @@ namespace ProyectoITXamarin
             this.Cantidad = cantidad;
         }
     }
-
-    
+    public class CustomColorizer : ICustomPointColorizer
+    {
+        Color ICustomPointColorizer.GetColor(ColoredPointInfo info)
+        {
+            
+            return Color.FromHex("#9AE4F3");
+        }
+        public ILegendItemProvider GetLegendItemProvider()
+        {
+            return null;
+        }
+    }
 }
