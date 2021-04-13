@@ -27,25 +27,25 @@
                          SelectedHeaderTextColor="{StaticResource blue600}"
                          SelectedHeaderIconColor="{StaticResource blue600}">
             <dxn:TabViewItem.Content>
-                    <StackLayout>
-                        <dxg:DataGridView x:Name="grid" ItemsSource="{Binding Clientes}" ShowAutoFilterRow="True">
-                            <dxg:DataGridView.CellStyle>
-                                <dxg:CellStyle Padding="12" BorderColor="#E8E8E8"
+                <StackLayout>
+                    <dxg:DataGridView x:Name="grid" ItemsSource="{Binding Clientes}" ShowAutoFilterRow="True">
+                        <dxg:DataGridView.CellStyle>
+                            <dxg:CellStyle Padding="12" BorderColor="#E8E8E8"
                            FontSize="14" FontColor="#1A1A1A" 
                            SelectionColor="#E2F0EE" SelectionFontColor="Black"/>
-                            </dxg:DataGridView.CellStyle>
-                            <dxg:DataGridView.ColumnHeaderStyle>
-                                <dxg:ColumnHeaderStyle Padding="15" BackgroundColor="#FAFAFA" BorderColor="#E8E8E8" BottomBorderColor="#E8E8E8"
+                        </dxg:DataGridView.CellStyle>
+                        <dxg:DataGridView.ColumnHeaderStyle>
+                            <dxg:ColumnHeaderStyle Padding="15" BackgroundColor="#FAFAFA" BorderColor="#E8E8E8" BottomBorderColor="#E8E8E8"
                                    FontSize="15" FontColor="#161616" FontAttributes="Bold" 
                                    HorizontalLineThickness="1.4"/>
-                            </dxg:DataGridView.ColumnHeaderStyle>
-                            <dxg:DataGridView.Columns>
-                                <dxg:TextColumn FieldName="Name" Caption="Nombre" Width="170" AutoFilterCondition="Contains"/>
-                                <dxg:TextColumn FieldName="Ruc" Caption="Ruc" Width="150"/>
-                                <dxg:TextColumn FieldName="Codigo" Caption="Código" Width="90"/>
-                            </dxg:DataGridView.Columns>
-                        </dxg:DataGridView>
-                    </StackLayout>
+                        </dxg:DataGridView.ColumnHeaderStyle>
+                        <dxg:DataGridView.Columns>
+                            <dxg:TextColumn FieldName="Name" Caption="Nombre" Width="170" AutoFilterCondition="Contains"/>
+                            <dxg:TextColumn FieldName="Ruc" Caption="Ruc" Width="150"/>
+                            <dxg:TextColumn FieldName="Codigo" Caption="Código" Width="90"/>
+                        </dxg:DataGridView.Columns>
+                    </dxg:DataGridView>
+                </StackLayout>
             </dxn:TabViewItem.Content>
         </dxn:TabViewItem>
         <dxn:TabViewItem HeaderText="Facturas" HeaderFontSize="13"
@@ -80,16 +80,56 @@
                          SelectedHeaderTextColor="{StaticResource blue600}"
                          SelectedHeaderIconColor="{StaticResource blue600}">
             <dxn:TabViewItem.Content>
-                <dxc:PieChartView x:Name="chart">
+                <dxc:PieChartView x:Name="chart" SelectionBehavior="Hatch">
+                    <dxc:PieChartView.ChartStyle>
+                        <dxc:PieChartStyle Palette="{Binding Palette}" 
+                               BorderColor="#747987"/>
+                    </dxc:PieChartView.ChartStyle>
+                    <dxc:PieChartView.Hint>
+                        <dxc:PieHint Enabled="True">
+                            <dxc:PieHint.Style>
+                                <dxc:PieHintStyle BackgroundColor="#424651"/>
+                            </dxc:PieHint.Style>
+                        </dxc:PieHint>
+                    </dxc:PieChartView.Hint>
                     <dxc:PieChartView.Series>
                         <dxc:DonutSeries>
+                            <dxc:DonutSeries.HintOptions>
+                                <dxc:PieSeriesHintOptions PointTextPattern="{}{L}: {V} Ventas"/>
+                            </dxc:DonutSeries.HintOptions>
                             <dxc:DonutSeries.Data>
                                 <dxc:PieSeriesDataAdapter DataSource="{Binding Ventas}"
                                               LabelDataMember="NameEmpresa"
                                               ValueDataMember="Cantidad"/>
                             </dxc:DonutSeries.Data>
+                            <dxc:DonutSeries.Label>
+                                <dxc:PieSeriesLabel Position="TwoColumns" TextPattern="{}{VP}%" Indent="20">
+                                    <dxc:PieSeriesLabel.Style>
+                                        <dxc:PieSeriesLabelStyle ConnectorThickness="3">
+                                            <dxc:PieSeriesLabelStyle.TextStyle>
+                                                <dxc:TextStyle Size="16"/>
+                                            </dxc:PieSeriesLabelStyle.TextStyle>
+                                        </dxc:PieSeriesLabelStyle>
+                                    </dxc:PieSeriesLabel.Style>
+                                </dxc:PieSeriesLabel>
+                            </dxc:DonutSeries.Label>
                         </dxc:DonutSeries>
                     </dxc:PieChartView.Series>
+                    <dxc:PieChartView.Legend>
+                        <dxc:Legend Orientation="LeftToRight"
+                        HorizontalPosition="Center"
+                        VerticalPosition="BottomOutside">
+                            <dxc:Legend.Style>
+                                <dxc:LegendStyle
+                             MarkerSize="20" TextIndent="10"
+                             ItemsVerticalIndent="20" Padding="0,0,0,80">
+                                    <dxc:LegendStyle.TextStyle>
+                                        <dxc:TextStyle Size="16"/>
+                                    </dxc:LegendStyle.TextStyle>
+                                </dxc:LegendStyle>
+                            </dxc:Legend.Style>
+                        </dxc:Legend>
+                    </dxc:PieChartView.Legend>
                 </dxc:PieChartView>
             </dxn:TabViewItem.Content>
         </dxn:TabViewItem>
