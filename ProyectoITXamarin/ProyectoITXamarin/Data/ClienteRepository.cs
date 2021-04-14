@@ -3,33 +3,33 @@ using System.Collections.Generic;
 using System.Text;
 using System.ComponentModel;
 using ProyectoITXamarin.Data;
+using ProyectoITXamarin.DataModel;
 
-namespace ProyectoITXamarin.DataModel
+namespace ProyectoITXamarin
 {
-    public class ClienteRepository
-    {
-        readonly BindingList<Cliente> clientes;
-        public ClienteRepository()
-        {
-            this.clientes = new BindingList<Cliente>();
-        }
-        public BindingList<Cliente> Clientes
-        {
-            get { return clientes; }
-        }
-    }
+    //public class ClienteRepository
+    //{
+    //    readonly BindingList<Cliente> clientes;
+    //    public ClienteRepository()
+    //    {
+    //        this.clientes = new BindingList<Cliente>();
+    //    }
+    //    public BindingList<Cliente> Clientes
+    //    {
+    //        get { return clientes; }
+    //    }
+    //}
 
-    public class FacturaRepository
-    {
-        readonly BindingList<Factura> facturas;
-        public FacturaRepository()
-        {
-            this.facturas = new BindingList<Factura>();
-        }
-        public BindingList<Factura> Facturas
-        {
-            get { return facturas; }
-        }
-    }
-
+    //public class FacturaRepository
+    //{
+    //    readonly BindingList<Factura> facturas;
+    //    public FacturaRepository()
+    //    {
+    //        this.facturas = new BindingList<Factura>();
+    //    }
+    //    public BindingList<Factura> Facturas
+    //    {
+    //        get { return facturas; }
+    //    }
+    //}
 }

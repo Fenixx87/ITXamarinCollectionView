@@ -33,6 +33,7 @@ namespace ProyectoITXamarin
                 grid.ItemsSource = resultado;
             }
         }
+
         public async void TraerDatos1()
         {
             var request = new HttpRequestMessage();
@@ -48,7 +49,22 @@ namespace ProyectoITXamarin
                 grid1.ItemsSource = resultado;
             }
         }
-        
+
+        public async void TraerDatosCollectionView()
+        {
+            var request = new HttpRequestMessage();
+            request.RequestUri = new Uri("https://api.jsonbin.io/b/606e153bceba857326707915");
+            request.Method = HttpMethod.Get;
+            request.Headers.Add("Accpet", "application/json");
+            var client = new HttpClient();
+            HttpResponseMessage response = await client.SendAsync(request);
+            if (response.StatusCode == HttpStatusCode.OK)
+            {
+                string content = await response.Content.ReadAsStringAsync();
+                var resultado = JsonConvert.DeserializeObject<List<Cliente>>(content);
+                Coleccion.ItemsSource = resultado;
+            }
+        }
 
         public MainPage()
         {
@@ -58,8 +74,10 @@ namespace ProyectoITXamarin
             DevExpress.XamarinForms.DataGrid.Initializer.Init();
             DevExpress.XamarinForms.Editors.Initializer.Init();
             DevExpress.XamarinForms.Navigation.Initializer.Init();
+            DevExpress.XamarinForms.CollectionView.Initializer.Init();
             TraerDatos();
             TraerDatos1();
+            TraerDatosCollectionView();
         }
         public bool ShowAutoFilterRow { get; set; }
     }

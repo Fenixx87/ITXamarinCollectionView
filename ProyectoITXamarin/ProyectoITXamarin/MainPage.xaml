@@ -6,14 +6,31 @@
              xmlns:dxg="http://schemas.devexpress.com/xamarin/2014/forms/datagrid"
              xmlns:dxe="http://schemas.devexpress.com/xamarin/2014/forms/editors"
              xmlns:dxc="http://schemas.devexpress.com/xamarin/2014/forms/charts"
-             xmlns:vm="clr-namespace:ProyectoITXamarin.DataModel"
-             x:Class="ProyectoITXamarin.MainPage">
+             xmlns:dxcv="http://schemas.devexpress.com/xamarin/2014/forms/collectionview"
+             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+             x:Class="ProyectoITXamarin.MainPage"
+             ios:Page.UseSafeArea="True">
     <ContentPage.BindingContext>
         <local:ViewModel/>
     </ContentPage.BindingContext>
     <ContentPage.Resources>
         <Color x:Key="lightText">#B8B8B8</Color>
         <Color x:Key="blue600">#FFFFFF</Color>
+        <Style TargetType="Grid">
+            <Setter Property="VisualStateManager.VisualStateGroups">
+                <VisualStateGroupList>
+                    <VisualStateGroup x:Name="CommonStates">
+                        <VisualState x:Name="Normal" />
+                        <VisualState x:Name="Selected">
+                            <VisualState.Setters>
+                                <Setter Property="BackgroundColor"
+                                        Value="LightGreen" />
+                            </VisualState.Setters>
+                        </VisualState>
+                    </VisualStateGroup>
+                </VisualStateGroupList>
+            </Setter>
+        </Style>
     </ContentPage.Resources>
     <dxn:TabView HeaderPanelPosition="Bottom"
              ItemHeaderWidth="*"
@@ -28,7 +45,7 @@
                          SelectedHeaderIconColor="{StaticResource blue600}">
             <dxn:TabViewItem.Content>
                 <StackLayout>
-                    <dxg:DataGridView x:Name="grid" ItemsSource="{Binding Clientes}" ShowAutoFilterRow="True">
+                    <dxg:DataGridView x:Name="grid" ShowAutoFilterRow="True">
                         <dxg:DataGridView.CellStyle>
                             <dxg:CellStyle Padding="12" BorderColor="#E8E8E8"
                            FontSize="14" FontColor="#1A1A1A" 
@@ -54,7 +71,7 @@
                          SelectedHeaderIconColor="{StaticResource blue600}">
             <dxn:TabViewItem.Content>
                 <StackLayout>
-                    <dxg:DataGridView x:Name="grid1" ItemsSource="{Binding Facturas}" ShowAutoFilterRow="True">
+                    <dxg:DataGridView x:Name="grid1" ShowAutoFilterRow="True">
                         <dxg:DataGridView.CellStyle>
                             <dxg:CellStyle Padding="12" BorderColor="#E8E8E8"
                                FontSize="14" FontColor="#1A1A1A" 
@@ -152,6 +169,60 @@
                 </dxc:ChartView>
             </dxn:TabViewItem.Content>
         </dxn:TabViewItem>
+        <dxn:TabViewItem HeaderText="Lista" HeaderFontSize="13"
+                         SelectedHeaderBackgroundColor="#6000D9"
+                         SelectedHeaderTextColor="{StaticResource blue600}"
+                         SelectedHeaderIconColor="{StaticResource blue600}">
+            <dxn:TabViewItem.Content>
+                <dxcv:DXCollectionView x:Name="Coleccion"
+                           SelectionMode="Single" 
+                           SelectedItem="collectionView.SelectedItem = null">
+                    <dxcv:DXCollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <Grid Padding="10">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="0"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <StackLayout Grid.Column="1"
+                             Padding="18,1,18,7"
+                             Margin="0,0,17,0"
+                             Orientation="Vertical">
+                                    <Label Text="{Binding Name}"
+                           FontSize="18"
+                           Margin="0,2"
+                           TextColor="#434549"/>
+                                    <Label Text="{Binding Ruc}"
+                               FontSize="15"
+                               TextColor="#687875"/>
+                                    <Label Text="{Binding Codigo}"
+                               FontSize="15"
+                               TextColor="#687875"/>
+                                </StackLayout>
+                            </Grid>
+                        </DataTemplate>
+                    </dxcv:DXCollectionView.ItemTemplate>
+                    <dxcv:DXCollectionView.Margin>
+                        <OnIdiom x:TypeArguments="Thickness" Phone="16,0,0,0" Tablet="71,0,0,0"/>
+                    </dxcv:DXCollectionView.Margin>
+                    <dxcv:DXCollectionView.GroupDescription>
+                        <dxcv:GroupDescription FieldName="Name" GroupInterval="Alphabetical"/>
+                    </dxcv:DXCollectionView.GroupDescription>
+                    <dxcv:DXCollectionView.GroupHeaderTemplate>
+                        <DataTemplate>
+                            <StackLayout Margin="2, 0, 18, 10">
+                                <Label FontFamily="Roboto-Medium"
+                       Margin="0,20,0,1"
+                       Padding="17,0,0,0"
+                       TextColor="#55575c"
+                       Text="{Binding Value}"/>
+                                <BoxView BackgroundColor="#B6AFAF" 
+                         HeightRequest="1"/>
+                            </StackLayout>
+                        </DataTemplate>
+                    </dxcv:DXCollectionView.GroupHeaderTemplate>
+                </dxcv:DXCollectionView>
+            </dxn:TabViewItem.Content>
+        </dxn:TabViewItem>
     </dxn:TabView>
 </ContentPage>
-    

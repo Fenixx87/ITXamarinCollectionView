@@ -34,4 +34,4 @@ C:\Users\rober\source\repos\Tablas ProyectoITXamarin\ProyectoITXamarin\ProyectoI
 C:\Users\rober\source\repos\Tablas ProyectoITXamarin\ProyectoITXamarin\ProyectoITXamarin\obj\Debug\netstandard2.0\ref\ProyectoITXamarin.dll
 C:\Users\rober\source\repos\Tablas ProyectoITXamarin\ProyectoITXamarin\ProyectoITXamarin\obj\Debug\netstandard2.0\ProyectoITXamarin.pdb
 C:\Users\rober\source\repos\Tablas ProyectoITXamarin\ProyectoITXamarin\ProyectoITXamarin\bin\Debug\netstandard2.0\DevExpress.XamarinForms.Charts.dll
-C:\Users\rober\source\repos\Tablas ProyectoITXamarin\ProyectoITXamarin\ProyectoITXamarin\obj\Debug\netstandard2.0\ProyectoITXamarin.csprojAssemblyReference.cache
+C:\Users\rober\source\repos\Tablas ProyectoITXamarin\ProyectoITXamarin\ProyectoITXamarin\bin\Debug\netstandard2.0\DevExpress.XamarinForms.CollectionView.dll

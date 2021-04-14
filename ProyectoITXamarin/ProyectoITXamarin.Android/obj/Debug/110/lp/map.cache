@@ -1,8 +1,10 @@
 DevExpress.Xamarin.Android.Charts.dll
+DevExpress.Xamarin.Android.CollectionView.dll
 DevExpress.Xamarin.Android.Editors.dll
 DevExpress.Xamarin.Android.Grid.dll
 DevExpress.Xamarin.Android.Navigation.dll
 DevExpress.XamarinForms.Charts.Android.dll
+DevExpress.XamarinForms.CollectionView.Android.dll
 DevExpress.XamarinForms.Editors.Android.dll
 DevExpress.XamarinForms.Grid.Android.dll
 DevExpress.XamarinForms.Navigation.Android.dll

@@ -26,11 +26,15 @@ namespace ProyectoITXamarin {
         private global::DevExpress.XamarinForms.Charts.PieChartView chart;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
+        private global::DevExpress.XamarinForms.CollectionView.DXCollectionView Coleccion;
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
         private void InitializeComponent() {
             global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(MainPage));
             grid = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::DevExpress.XamarinForms.DataGrid.DataGridView>(this, "grid");
             grid1 = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::DevExpress.XamarinForms.DataGrid.DataGridView>(this, "grid1");
             chart = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::DevExpress.XamarinForms.Charts.PieChartView>(this, "chart");
+            Coleccion = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::DevExpress.XamarinForms.CollectionView.DXCollectionView>(this, "Coleccion");
         }
     }
 }

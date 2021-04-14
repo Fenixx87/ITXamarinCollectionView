@@ -6,6 +6,9 @@ using System.Net;
 using System.Net.Http;
 using Newtonsoft.Json;
 using DevExpress.XamarinForms.Charts;
+using ProyectoITXamarin.DataModel;
+using ProyectoITXamarin.Data;
+using System.ComponentModel;
 
 namespace ProyectoITXamarin
 {
@@ -18,6 +21,7 @@ namespace ProyectoITXamarin
         public ViewModel()
         {
             List<Venta> Ventas = new List<Venta>();
+
             TraerDatosCharts();
             palette = PaletteLoader.LoadPalette("#25a966", "#F13D45", "#45B6F1", "#F7EC42", "#975ba5", "#f45a4e");
         }
@@ -44,7 +48,6 @@ namespace ProyectoITXamarin
             {
                 string content = await response.Content.ReadAsStringAsync();
                 var resultado = JsonConvert.DeserializeObject<List<Venta>>(content);
-                //Ventas. = resultaxdoñ
                 this.Ventas = resultado;
             }
         }
